@@ -10,12 +10,14 @@ class mainFooterTemplate{
         {
             echo <<<mainFooter
                 <footer>
-                    <div class ="row">
+                    <div class ="container">
+                        <div class ="row">
                         <div class="col-md-12">
                             <h2>this is my web page footer</h2>
                         </div>
                     </div>
-                </footer>
+                </div>
+            </footer>
 mainFooter;
 
         }

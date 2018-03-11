@@ -55,7 +55,7 @@ class productAdditonForm{
                     <label class="col-md-4 control-label" for="submit"></label>
                     <div class="col-md-8">
                         <button id="submit" name="submit" value="Submit" class="btn btn-success">Submit</button>
-                            <a href = "index.php" button id="cancel" name="cancel" value="Cancel" class="btn btn-info">Cancel</a></button>
+                        <a href = "index.php" button id="cancel" name="cancel" value="Cancel" class="btn btn-info">Cancel</a></button>
                     </div>
                 </div>
 

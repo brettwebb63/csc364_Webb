@@ -1,6 +1,6 @@
 <?php
 require ($_SERVER[ 'DOCUMENT_ROOT'] . "/../includes/application_includes.php");
-$sql = 'select * from products';
+$sql = 'select * from products where isActive = 0';
 $products = $db->query($sql);
 
 require_once (FS_TEMPLATES . 'mainHeaderTemplate.php');
@@ -12,22 +12,17 @@ require_once (FS_TEMPLATES . 'mainFooterTemplate.php');
  * Date: 2/6/2018
  * Time: 9:55 AM
  */
+mainHeaderTemplate::pageHeader();
 ?>
 <!DOCTYPE HTML>
 <html>
 <body>
     <div class="container">
-        <?php
-        mainHeaderTemplate::pageHeader();
-        ?>
-        <main>
             <div class="row">
-                <div class = "col-xs-3">
-                    <aside>
+                <div class = "sidebar col-xs-2">
                         <h2> side bar </h2>
-                    </aside>
                 </div>
-                <div class ="col-xs-9">
+                <div class ="content col-xs-10">
                     <h2 style ='text-align: center'> Products</h2>
                             <?php
                             // Loop through the posts and display them
@@ -38,10 +33,8 @@ require_once (FS_TEMPLATES . 'mainFooterTemplate.php');
                             ?>
                 </div>
             </div>
-        </main>
-        <?php
-        mainFooterTemplate::mainFooter();
-        ?>
     </div>
 </body>
 </html>
+<?php
+mainFooterTemplate::mainFooter();

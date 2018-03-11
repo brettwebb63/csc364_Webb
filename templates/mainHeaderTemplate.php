@@ -10,7 +10,7 @@ class mainHeaderTemplate{
     public static function pageHeader()
     {
         echo <<<pageHeader
-            <html>
+     <html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -33,23 +33,21 @@ class mainHeaderTemplate{
         <![endif]-->
         <style>
             div.container{
-            width: 100%;
-            padding-left: 0px;
+                width: 100%;
+                padding-left: 0px;
             }
             div.contentrow{
-            padding-top: 15px;
+                padding-top: 15px;
             }
-            main{
+            .content{
                 background-color: #EBF2EA;
-                margin-left: 0px;
-                margin-right:0px;
-                padding-bottom: 0px;
+                height:100%;
             }
-            aside{
-                background-color: #888C46;
+            .sidebar{
+                background-color: #C0B283;
                 margin-bottom: 0px;
                 margin-top: 0px;
-                height: 1150px;
+                height: 100%;
             }
             footer{
                 text-align: center;
@@ -60,23 +58,32 @@ class mainHeaderTemplate{
                 padding-right:50px;
             }
             header{
-                background-color: #132226;
+                background-color: #2C3531;
                 color: white;
+                padding-bottom: 25px;
+            }
+            img{
+            max-width: 1000px;
+            max-height: 225px;
+            align: center;
             }
         </style>
     </head>
             <header>
+                <div class="container">
                 <div class="row">
                     <div class="col-xs-3">
-                        <h6>ehhhhh</h6>
+                        <h4 style="text-align:center">Tina the Tiburon Inc.</h4>
                     </div>
                     <div class="col-xs-9">
                         <nav>
-                            <h4> <a href = "index.php" button id="button1id" name="button1id" class="btn btn-md btn-primary" >Home</a></button> | Contact | Cart | About |  <a href = "addingAProduct.php" button id="button2id" name="button2id" class="btn btn-md btn-success" >Add A Product</a></button></h4>
+                            <h4> <a href = "index.php" button id="button1id" name="button1id" class="btn btn-md btn-primary" >Home</a></button> | Cart | About |  <a href = "addingAProduct.php" button id="button2id" name="button2id" class="btn btn-md btn-success" >Add A Product</a></button></h4>
                         </nav>
                     </div>
                 </div>
+                </div>
             </header>
+    
 pageHeader;
 
     }
