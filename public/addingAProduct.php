@@ -13,23 +13,38 @@ require_once (FS_TEMPLATES . 'productAdditonForm.php');
 $requestType = $_SERVER[ 'REQUEST_METHOD' ];
 
     mainHeaderTemplate::pageHeader();
-    if ($requestType == 'GET') {
-        showForm();
-    } elseif ($requestType == 'POST') {
-        echo '<h2>This is the data that was entered</h2>';
-        echo '<pre>';
-        print_r($_POST);
-        echo '</pre>';
+    ?>
+<div class="container">
+        <div class ="row">
+            <div class="filler col-xs-2">
 
-        $name = $_POST['name'];
-        $description = $_POST['description'];
-        $price = $_POST['price'];
-        $picture = $_POST['picture'];
+            </div>
+            <div class="UpdateOrAddForm col-xs-8">
+                    <?php
+                         if ($requestType == 'GET') {
+                            showForm();
+                         } elseif ($requestType == 'POST') {
+                             echo '<h2>This is the data that was entered</h2>';
+                             echo '<pre>';
+                                print_r($_POST);
+                             echo '</pre>';
 
-        $sql = "insert into products ( name, description, price, picture) values ('" . $name . "', '" . $description . "', '" . $price . "', '" . $picture . "')";
-        $db->query($sql);
-    }
+                            $name = $_POST['name'];
+                            $description = $_POST['description'];
+                            $price = $_POST['price'];
+                            $picture = $_POST['picture'];
 
+                             $sql = "insert into products ( name, description, price, picture) values ('" . $name . "', '" . $description . "', '" . $price . "', '" . $picture . "')";
+                             $db->query($sql);
+                         }
+                    ?>
+            </div>
+            <div class="filler col-xs-2">
+
+            </div>
+        </div>
+</div>
+<?php
     mainFooterTemplate::mainFooter();
 
 $fields = [

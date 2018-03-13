@@ -25,9 +25,10 @@ class mainContent{
                 <div class = "col-xs-12">
                     <a href = "updateProduct.php?id=$id" button id="button1id" name="button1id" class="btn btn-primary">Update Product</a></button>
                     <a href = "deleteProduct.php?id=$id" button id="button2id" name="button2id" class="btn btn-danger">Delete Product</a></button>
+                    <a href = "detailsPage.php?id=$id" button id="button3id" name="button3id" class="btn btn-success">More Details</a></button>
+
                 </div>
                 <div class = "col-xs-12">    
-                    <a href = "detailsPage.php?id=$id" button id="button3id" name="button3id" class="btn btn-success"> $ More Details</a></button>
                 </div>
             </div>        
         </div>

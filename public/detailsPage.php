@@ -21,29 +21,26 @@ mainHeaderTemplate::pageHeader();
 ?>
     <!DOCTYPE HTML>
     <html>
-    <body>
-    <div class="container">
-        <main>
-            <div class="row">
-                <div class = "sidebar col-xs-2">
-                    <h2> side bar </h2>
-                </div>
-                <div class ="content col-xs-10">
-
-                    <?php
-                    while ($productInfo = $productInformation->fetch()) {
-                        // Call the method to create the layout for a post
-                        detailsPageLayout::detailsContent($productInfo);
-                    }
-
-                    ?>
-
-                </div>
+        <body>
+            <div class="container">
+                <main>
+                    <div class="row">
+                        <div class = "sidebar col-xs-2">
+                            <h2> side bar </h2>
+                        </div>
+                        <div class ="content col-xs-10">
+                            <?php
+                                while ($productInfo = $productInformation->fetch()) {
+                                    // Call the method to create the layout for a post
+                                    detailsPageLayout::detailsContent($productInfo);
+                                }
+                            ?>
+                        </div>
+                    </div>
+                </main>
             </div>
-        </main>
+        </body>
+    </html>
         <?php
         mainFooterTemplate::mainFooter();
         ?>
-    </div>
-    </body>
-    </html>

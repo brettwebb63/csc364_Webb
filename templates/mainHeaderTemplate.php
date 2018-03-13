@@ -36,12 +36,36 @@ class mainHeaderTemplate{
                 width: 100%;
                 padding-left: 0px;
             }
+            div.footerCenter{
+                text-align: center;
+                color: white;
+                padding-left:30px;
+            }
+            div.footerRight{
+                padding: 40px 0px 0px 0px;
+            }
+            div.footerLeft{
+                text-align: center;
+                color: white;
+                padding-left:30px;
+            }
+          
             div.contentrow{
                 padding-top: 15px;
             }
             .content{
                 background-color: #EBF2EA;
                 height:100%;
+            }
+            .UpdateOrAddForm{
+                background-color: #EBF2EA;
+                height:550px;
+            }  
+            div.filler{
+                background-color: #C0B283;
+                margin-bottom: 0px;
+                margin-top: 0px;
+                height: 550px;
             }
             .sidebar{
                 background-color: #C0B283;
@@ -51,7 +75,8 @@ class mainHeaderTemplate{
             }
             footer{
                 text-align: center;
-                background-color: #132226;
+                background-color: #2C3531;
+                padding-bottom: 40px;
             }
             nav{
                 text-align: right;
@@ -63,9 +88,36 @@ class mainHeaderTemplate{
                 padding-bottom: 25px;
             }
             img{
-            max-width: 1000px;
-            max-height: 225px;
-            align: center;
+                max-width: 1000px;
+                max-height: 225px;
+                align: center;
+            }
+            ul {
+                float: right;
+                list-style-type: none;
+                margin: 0;
+                padding: 0px 0px 0px 0px;
+                overflow: hidden;
+                background-color: #C0B283;
+            }
+
+            li {
+                float: left;
+            }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+            li a:hover {
+                background-color: #2C3531;
+            }
+            div.Warranty{
+                padding: 40px 0px 0px 0px;
             }
         </style>
     </head>
