@@ -15,5 +15,8 @@ if ( $requestType == 'GET' ) {
     // use sql to get the post with id = 39
     $sql = 'update products set isActive = 1 where id = ' .  $_GET['id'];
     $result = $db->query($sql);
+
+    header('Location: adminAllProducts.php');
+
 }
 //redirect them to the home page

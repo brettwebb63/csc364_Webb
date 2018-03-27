@@ -27,10 +27,10 @@ class mainFooterTemplate{
                                     </h5>
                             </div>
                             <div class="footerRight col-xs-4">
-                                    <ul>
+                                    <ul style="float: right;">
                                         <li><a class="active" href="index.php">Home</a></li>
                                         <li><a href="addingAProduct.php">Add A Product</a></li>
-                                        <li><a href="#contact">Contact</a></li>
+                                        <li><a href="cartView.php">View Cart</a></li>
                                         <li><a href="#about">About</a></li>
                                     </ul>
                             </div>

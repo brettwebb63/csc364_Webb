@@ -28,6 +28,9 @@ class detailsPageLayout{
             </div>
             <div class = "$id col-xs-3">
                 <div class = "col-xs-12">
+                <div class = "col-xs-12">
+                <h2> $$productPrice </h2>
+                </div>
                     <a href = "index.php" button id="button1id" name="button1id" class="btn btn-primary">Back to the listings</a></button>
                     <button id="button2id" name="button2id" class="btn btn-success">Add to Cart</button>
                 </div>
@@ -35,7 +38,10 @@ class detailsPageLayout{
          </div>
          <div class="row">
             <div class="col-xs-6">
-                
+            <div class="review">
+                <h4 style ='text-decoration: underline #2C3531; text-align:center'> Reviews</h4>
+                    
+            </div>
             </div>
             <div class="col-xs-6">
             <div class="Warranty">

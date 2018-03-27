@@ -26,27 +26,36 @@ mainHeaderTemplate::pageHeader();
                         $sql = 'select * from products where id = ' .  $_GET['id'];
                         $result = $db->query($sql);
                         $row = $result->fetch();
+
                         $id = $row['id'];
                         $name = $row['name'];
                         $description = $row['description'];
                         $price = $row['price'];
                         $picture = $row['picture'];
+                        $currentPicture= $row['picture'];
+                        $isActive = $row['isActive'];
 
-                        productUpdateForm::productUpdate($id, $name, $description, $price, $picture);
+                        productUpdateForm::productUpdate($id, $name, $description, $price, $picture, $isActive, $currentPicture);
                     }
                     elseif ($requestType == 'POST') {
                         //Validate data
                         // Save data
+                        if($_POST['picture'] == ""){
+                            $picture = $_POST['current'];
+                        }
+                        else {
+                            $picture = $_POST['picture'];
+                        }
+
                         $id = ($_POST['id']);
                         $name = htmlspecialchars($_POST['name'], ENT_QUOTES);
                         $description = htmlspecialchars($_POST['description'], ENT_QUOTES);
                         $price = htmlspecialchars($_POST['price'], ENT_QUOTES);
-                        $picture = $_POST['picture'];
+                        $isActive = $_POST['isActive'];
 
-                        $sql = "update products set name = '$name', description = '$description', price = '$price', picture = '$picture' where id = $id;";
+                        $sql = "update products set name = '$name', description = '$description', price = '$price', picture = '$picture', isActive = '$isActive' where id = $id;";
                         $result = $db->query($sql);
 
-                        header('Location: index.php');
                     }
                     ?>
             </div>

@@ -31,7 +31,10 @@ class mainHeaderTemplate{
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
+        <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+
         <style>
+         
             div.container{
                 width: 100%;
                 padding-left: 0px;
@@ -59,19 +62,22 @@ class mainHeaderTemplate{
             }
             .UpdateOrAddForm{
                 background-color: #EBF2EA;
-                height:550px;
+                height:800px;
             }  
             div.filler{
                 background-color: #C0B283;
                 margin-bottom: 0px;
                 margin-top: 0px;
-                height: 550px;
+                height: 800px;
             }
             .sidebar{
                 background-color: #C0B283;
                 margin-bottom: 0px;
                 margin-top: 0px;
                 height: 100%;
+            }
+            .paddingNeeded{
+                padding-left: 15px;
             }
             footer{
                 text-align: center;
@@ -85,7 +91,10 @@ class mainHeaderTemplate{
             header{
                 background-color: #2C3531;
                 color: white;
-                padding-bottom: 25px;
+                padding-bottom: 25px; 
+            }
+            div.title{
+                font-family:Cinzel;
             }
             img{
                 max-width: 1000px;
@@ -93,7 +102,6 @@ class mainHeaderTemplate{
                 align: center;
             }
             ul {
-                float: right;
                 list-style-type: none;
                 margin: 0;
                 padding: 0px 0px 0px 0px;
@@ -119,19 +127,36 @@ class mainHeaderTemplate{
             div.Warranty{
                 padding: 40px 0px 0px 0px;
             }
+            div.review{
+                padding: 40px 0px 0px 0px;
+            }
+            #CartTable th{
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+            }
+            #CartTable td, #CartTable th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+            #CartTable tr:hover {background-color: #f5f5f5;}
+
         </style>
     </head>
             <header>
                 <div class="container">
                 <div class="row">
-                    <div class="col-xs-3">
-                        <h4 style="text-align:center">Tina the Tiburon Inc.</h4>
+                    <div class="title col-xs-3">
+                        <h2 style="text-align:center">Tina the Tiburon Inc.</h2>
                     </div>
                     <div class="col-xs-9">
                         <nav>
-                            <h4> <a href = "index.php" button id="button1id" name="button1id" class="btn btn-md btn-primary" >Home</a></button> | Cart | About |  <a href = "addingAProduct.php" button id="button2id" name="button2id" class="btn btn-md btn-success" >Add A Product</a></button></h4>
+                            <h4> <a href = "index.php" button id="button1id" name="button1id" class="btn btn-md btn-primary" >Home</a></button> | <a href = "cartView.php" button id="button4id" name="button4id" class="btn btn-md btn-success" >View Cart</a></button> | <a href = "adminAllProducts.php" button id="button3id" name="button3id" class="btn btn-md btn-primary" >View All Products</a></button> |  <a href = "addingAProduct.php" button id="button2id" name="button2id" class="btn btn-md btn-success" >Add A Product</a></button></h4>
                         </nav>
                     </div>
+                </div>
+                <div class="col-xs-12">
+
                 </div>
                 </div>
             </header>
