@@ -28,9 +28,9 @@ class Cart
         // See if item is already in cart
         // if yes, increment qty.
         // If not, just add to the items list
-        foreach ($_SESSION['cart'] as $row => $innerArray) {
+        foreach ($this->items as $row => $innerArray) {
             if ($innerArray['id'] == $newItem['id']) {
-                $innerArray['quantity'] = $innerArray['quantity'] + $newItem['quantity'];
+                $this->items[$row]['quantity'] = $this->items[$row]['quantity'] + $newItem['quantity'];
             } else {
                 $this->items[] = $newItem;
             }
@@ -53,13 +53,11 @@ class Cart
      */
     public function delete($id,$cartItems)
     {
-            $index = 0;
-            foreach ($cartItems as $row => $innerArray) {
+            foreach ($this->items as $row => $innerArray) {
                 if($innerArray["id"] == $id)
                 {
-                    unset($cartItems[$index]);
+                    unset($this->items[$row]);
                 }
-                $index++;
             }
 
         $this->saveCart();
@@ -71,10 +69,10 @@ class Cart
     public function changeQty($id, $newQty)
     {
 
-            foreach ($_SESSION["cart"] as $row => $innerArray) {
+            foreach ($this->items as $row => $innerArray) {
                 if($innerArray["id"] == $id)
                 {
-                    $innerArray['quantity'] = $newQty;
+                    $this->items[$row]['quantity'] = $newQty;
                 }
             }
 

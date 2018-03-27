@@ -53,7 +53,7 @@ mainHeaderTemplate::pageHeader();
                         $price = htmlspecialchars($_POST['price'], ENT_QUOTES);
                         $isActive = $_POST['isActive'];
 
-                        $sql = "update products set name = '$name', description = '$description', price = '$price', picture = '$picture', isActive = '$isActive' where id = $id;";
+                        $sql = "update products set name = '$name', description = '$description', price = '$price', picture = '$picture', isActive = $isActive where id = $id;";
                         $result = $db->query($sql);
 
                     }
