@@ -34,7 +34,9 @@ class mainHeaderTemplate{
         <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
 
         <style>
-         
+            div.upperPadding {
+                padding-top: 15px;
+            }
             div.container{
                 width: 100%;
                 padding-left: 0px;

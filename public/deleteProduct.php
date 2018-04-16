@@ -20,3 +20,4 @@ if ( $requestType == 'GET' ) {
 
 }
 //redirect them to the home page
+header('Location: index.php');

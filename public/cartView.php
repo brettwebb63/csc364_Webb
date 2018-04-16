@@ -25,10 +25,10 @@ mainHeaderTemplate::pageHeader();
             $cart = new Cart();
             //assigning my blank array to the return value of the get method
             $cartItems=$cart->get();
-            $total = $cart->calculateTotal($cartItems);
                 //If the cart exists
                 if (array_key_exists('cart', $_SESSION)) {
                     //for every item in the cart
+                    $total = $cart->calculateTotal($cartItems);
                     echo"<table id='CartTable' border='1'>";
                     echo"<tr>
                             <th>Product Image</th>                            
@@ -36,10 +36,10 @@ mainHeaderTemplate::pageHeader();
                             <th>Product Price</th>
                             <th>Product Quantity</th>
                          </tr>";
+
                     foreach($cartItems as $row => $innerArray){
                         $id =$innerArray['id'];
                         $newQty = "";
-                        //$total = $total + ($innerArray['quantity'] * $innerArray['price']);
                         echo "<tr class='$id'>";
                         echo "<td><img src='/product_images/".$innerArray['picture']."' style='height:75px;width:100px'></td>";
                         echo "<td>".$innerArray['name']."</td>";
@@ -56,7 +56,10 @@ mainHeaderTemplate::pageHeader();
                         echo"</tr>";
                     }
 
-                    echo "<tr><td>Total : ".$total."</td></tr>";
+                    echo "<tr>
+                            <td>Total : ".$total."</td>
+                            <td><a href =\"order.php\"button id=\"orderButton\" name=\"orderButton\" class=\"btn btn-success\">Checkout</button></td>
+                         </tr>";
                     echo "</table>";
                 }
                 //If the cart does not exist

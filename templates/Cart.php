@@ -28,12 +28,18 @@ class Cart
         // See if item is already in cart
         // if yes, increment qty.
         // If not, just add to the items list
-        foreach ($this->items as $row => $innerArray) {
-            if ($innerArray['id'] == $newItem['id']) {
-                $this->items[$row]['quantity'] = $this->items[$row]['quantity'] + $newItem['quantity'];
-            } else {
-                $this->items[] = $newItem;
+        $inCart = false;
+        if (array_key_exists('cart', $_SESSION)) {
+            foreach ($_SESSION['cart'] as $row => $innerArray) {
+                if ($innerArray['id'] == $newItem['id']) {
+                    $this->items[$row]['quantity'] = $this->items[$row]['quantity'] + $newItem['quantity'];
+                    $inCart = true;
+                }
             }
+        }
+        if($inCart == false)
+        {
+            $this->items[] = $newItem;
         }
 
         $this->saveCart();

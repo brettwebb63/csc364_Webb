@@ -12,8 +12,7 @@ $requestType = $_SERVER[ 'REQUEST_METHOD' ];
 require_once (FS_TEMPLATES . 'Cart.php');
 
     $newQty = $_POST['newQty'];
-    echo $newQty;
-// use sql to get the post with id = 39
+
     $cart = new Cart();
 
     $id = $_GET['id'];
